@@ -1,30 +1,18 @@
-# odds-and-evens-game
+# # odds-and-evens-game
+Play online ODDS AND EVENS (vanilla js)
 
-Play online ODDS AND EVENS (made with vanilla js)
+I have made this project with:
+-  HTML 
+- CSS 
+- JS
 
+the game is live on fire base hosting.
 
-                 /$$       /$$                                           /$$                                                        
-                | $$      | $$                                          | $$                                                        
-  /$$$$$$   /$$$$$$$  /$$$$$$$  /$$$$$$$        /$$$$$$  /$$$$$$$   /$$$$$$$        /$$$$$$  /$$    /$$ /$$$$$$  /$$$$$$$   /$$$$$$$
- /$$__  $$ /$$__  $$ /$$__  $$ /$$_____/       |____  $$| $$__  $$ /$$__  $$       /$$__  $$|  $$  /$$//$$__  $$| $$__  $$ /$$_____/
-| $$  \ $$| $$  | $$| $$  | $$|  $$$$$$         /$$$$$$$| $$  \ $$| $$  | $$      | $$$$$$$$ \  $$/$$/| $$$$$$$$| $$  \ $$|  $$$$$$ 
-| $$  | $$| $$  | $$| $$  | $$ \____  $$       /$$__  $$| $$  | $$| $$  | $$      | $$_____/  \  $$$/ | $$_____/| $$  | $$ \____  $$
-|  $$$$$$/|  $$$$$$$|  $$$$$$$ /$$$$$$$/      |  $$$$$$$| $$  | $$|  $$$$$$$      |  $$$$$$$   \  $/  |  $$$$$$$| $$  | $$ /$$$$$$$/
- \______/  \_______/ \_______/|_______/        \_______/|__/  |__/ \_______/       \_______/    \_/    \_______/|__/  |__/|_______/ 
-                                                                                                                                    
-                                                                                         
+**You can play it right now, just go to this addres:**
 
-I have made this project with simple HTML CSS and JS.
+## https://oddsnevans.com/
 
-Its live on fire base hosting.
-
-You can play it right now, just go to this addres:
-https://oddsnevans.com/
 
 If you have any suggestions or comments about the code or about the design you can open a pull request or just live a comment.
 
 Thank you!
-
-
-
-
