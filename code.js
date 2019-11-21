@@ -90,7 +90,7 @@ function ShowMainDiv() {
   Fingers[0].style.display = "flex";
 
   let SwitchToZug = document.getElementsByClassName("SwitchToZug");
-  SwitchToZug[0].style.display = "flex";
+  SwitchToZug[0].style.display = "grid";
 
   document.getElementById("MainFormDiv").style.display = "none";
   document.getElementById("HideButtons").style.display = "none";

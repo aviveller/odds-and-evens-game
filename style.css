@@ -95,10 +95,12 @@ h1 {
     position: absolute;
     cursor: pointer;
     top: 0;
-    left: 0;
+    left: -10px;
     right: 0;
     bottom: 0;
-    background-color: #73cbc7;
+    
+
+    background-color: #75DBD0;
     -webkit-transition: .4s;
     transition: .4s;
     height: 35px;
@@ -136,8 +138,7 @@ input:checked+.slider:before {
 
 .slider.round {
     border-radius: 40px;
-    margin-left: 20px;
-    margin-right: 20px;
+   
 }
 
 .slider.round:before {
@@ -146,9 +147,9 @@ input:checked+.slider:before {
 
 .SwitchToZug {
     display: none;
-    justify-content: space-evenly;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    grid-template-columns: 250px 250px 250px;
+    justify-content: center;
+    justify-items: center;
     width: 700px;
     margin: auto;
     margin-top: 20px;
@@ -183,7 +184,7 @@ input:checked+.slider:before {
     height: 80%;
     width: 45%;
     margin: auto;
-    background-color: #73cbc7;
+    background-color: #75DBD0;
     background-size: contain !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
@@ -321,15 +322,26 @@ input:checked+.slider:before {
     border-radius: 10px;
     height: 270px;
     width: 300px;
-    margin-left: 30px;
+    
 
 
+}
+
+.boxBorderLeft{
+
+    margin-right: 15px;
+}
+
+.boxBorderRight{
+
+    margin-left: 15px;
 }
 
 .pcBoxBG {
     height: 100%;
     border-radius: 10px white;
-    background-color: #73cbc7;
+    background-color: #75DBD0;
+    
 
 }
 
@@ -337,7 +349,8 @@ input:checked+.slider:before {
 
     height: 100%;
     border-radius: 10px white;
-    background-color: #73cbc7;
+    background-color: #75DBD0;
+    
 }
 
 .boxesBG {
@@ -357,8 +370,8 @@ input:checked+.slider:before {
     background-position: center !important;
     background-repeat: no-repeat !important;
     background-origin: content-box !important;
-    background-color: #73cbc7 !important;
-    border: 5px solid #efeaed;
+    background-color: #75DBD0 !important;
+    border: 6px solid white;
     border-radius: 20px;
 
     padding: 8px;
@@ -366,7 +379,7 @@ input:checked+.slider:before {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 10px 10px;
+    margin: 4px 4px;
     -webkit-transition-duration: 0.4s;
     /* Safari */
     transition-duration: 0.4s;
@@ -420,6 +433,7 @@ input:checked+.slider:before {
     margin-bottom: 10px;
     font-family: 'Tomorrow', sans-serif;
     font-size: 25px;
+    color: white;
 }
 
 
