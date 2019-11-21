@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="play odds and evens for fun">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="author" content="avi veller">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css?family=Tomorrow&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <title>Odds And Evens</title>
+</head>
+
+<body>
+
+    <h1>ODDS AND EVENS</h1>
+    <div id="HideButtons">
+
+        <div class="DivButtons2"> <button class="buttons" id="Instructions"
+                onclick="ShowInstructions()">Instructions</button>
+            <div id="InstructionsDiv"><button id="closeInstructions" onclick="closeInstructions()">X</button>
+                <p id="InstructionsText">Odds and evens is a simple game of chance and hand game, involving two
+                    people simultaneously revealing a number of fingers and winning or losing depending on whether
+                    they are odd or even, or alternatively involving one person taking picking up coins or other
+                    small objects and hiding them in their closed hand, while another player guesses whether they
+                    have an odd or even number. The game may be used to make a decision or played for fun.
+
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div id="MainFormDiv" class="FormeBg">
+        <div id="entryForm" class="form">
+
+            <select class="inputs" id="GameType" onchange="ShowP2(this.value)">
+                <option value="one">Player vs Pc</option>
+                <option value="two">Player vs Player</option>
+            </select> <br>
+
+            <input type="text" id="P1Name" class="inputs" placeholder="player name"> <br>
+
+            <input type="text" id="P2Name" class="inputs" placeholder="player2 name"> <br>
+
+            <input type="submit" class="playB" value="Play" onclick="ShowMainDiv()">
+
+
+        </div>
+
+    </div>
+
+
+
+    <div class="SwitchToZug">
+        <div class="NameAndTitle">
+            <p class="zugAndPeredTitle " id="PlayerName">User</p>
+            <p class="zugAndPeredTitle peredZugSmaller" id="pered">(odds)</p>
+        </div>
+
+
+        <label class="switch">
+            <input type="checkbox" id="zugOpered" onclick="replaceText(this)">
+            <span class="slider round"></span>
+        </label>
+
+        <div class="NameAndTitle">
+            <p class="zugAndPeredTitle " id="PcName">Pc</p>
+            <p class="zugAndPeredTitle peredZugSmaller" id="zug">(evens)</p>
+        </div>
+
+    </div>
+
+
+    <div class="boxes">
+        <div class="boxBorder">
+            <div class="userBoxBG boxesBG">
+                <div id="userBox" class="box leftBoxAnimation"></div>
+            </div>
+        </div>
+
+        <div class="boxBorder">
+            <div class="pcBoxBG boxesBG">
+                <div id="pcBox" class="box rightBoxAnimation"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div>
+        <div class="FingerBtns">
+            <button class="button b1" id="1" onclick="play(this.id)"></button>
+            <button class="button b2" id="2" onclick="play(this.id)"></button>
+            <button class="button b3" id="3" onclick="play(this.id)"></button>
+            <button class="button b4" id="4" onclick="play(this.id)"></button>
+            <button class="button b5" id="5" onclick="play(this.id)"></button>
+
+        </div>
+
+
+
+
+
+
+        <div class=" mount">
+
+            <div class="credit">
+                <p id="CRtext">this website made with ❤️ by <b>Avi Veller</b></p>
+                <p id="CRtext2">UX UI by <b><a href="https://giphy.com/tonybabel/">Ram Salim </a> </b> || Icons by
+                    gstudioimagen from <b><a href="https://www.freepik.com/">freepic </a> </b>
+                    <p id="CRtext3"></p>
+
+
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+    <script src="code.js"></script>
+
+</body>
+
+</html>

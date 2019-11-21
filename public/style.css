@@ -1,0 +1,552 @@
+
+
+
+html{
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 100%;
+}
+
+::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: #FF0000;
+}
+html,
+body {
+    
+    background-repeat: no-repeat;
+    overflow: hidden;
+
+}
+
+body {
+    background-image: linear-gradient(#955A7F, white);
+    margin: 0px;
+
+
+}
+
+h1 {
+    margin-top: 50px;
+    margin-bottom: 0px;
+    text-align: center;
+    font-family: 'Tomorrow', sans-serif;
+    font-size: 40px;
+    color: white;
+    text-shadow: 1px 2px rgb(90, 88, 88);
+}
+
+.mount {
+    font-family: 'Tomorrow', sans-serif;
+    font-size: 12px;
+    text-align: center;
+    color: black;
+
+    height: 300px;
+    background: url(./img/Interface.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+}
+
+.credit {
+    position: absolute;
+    bottom: 10px;
+}
+
+
+.MainGrid {
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 50px;
+
+    padding: 30px;
+    width: 45%;
+    height: 500px;
+    display: none;
+
+}
+
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    border: 5px solid white;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #73cbc7;
+    -webkit-transition: .4s;
+    transition: .4s;
+    height: 35px;
+    width: 75px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #ccc;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #ccc;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(40px);
+    transform: translateX(40px);
+}
+
+
+/* Rounded sliders */
+
+.slider.round {
+    border-radius: 40px;
+    margin-left: -15px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.SwitchToZug {
+    display: none;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 700px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+
+
+
+
+}
+
+.boxes {
+    display: none;
+    justify-content: center;
+    height: 250px;
+    width: 100%;
+    margin-bottom: 65px;
+
+
+
+
+
+
+}
+
+.Fight {
+
+    height: 70%;
+}
+
+.box {
+    height: 80%;
+    width: 45%;
+    margin: auto;
+    background-color: #73cbc7;
+    background-size: contain !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+
+}
+
+#pcBox {
+    background: url(./img/3x/right.png);
+    transform: rotate(-25deg);
+    -webkit-transform: rotate(-25deg);
+    width: 250px;
+    height: 250px;
+    margin-bottom: -50px;
+}
+
+
+.rightBoxAnimation {
+    -webkit-animation-name: rightBoxAnimation;
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 3s;
+    /* Safari 4.0 - 8.0 */
+    animation-duration: 3s;
+    animation-name: rightBoxAnimation;
+    animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes rightBoxAnimation {
+    0% {
+        transform: rotate(-35deg);
+        -webkit-transform: rotate(-35deg);
+    }
+
+
+    50% {
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(-35deg);
+        -webkit-transform: rotate(-35deg);
+    }
+}
+
+
+/* Standard syntax */
+
+@keyframes rightBoxAnimation {
+    0% {
+        transform: rotate(-35deg);
+        -webkit-transform: rotate(-35deg);
+    }
+
+
+    50% {
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(-35deg);
+        -webkit-transform: rotate(-35deg);
+    }
+}
+
+
+#userBox {
+
+    width: 250px;
+    height: 250px;
+    margin-bottom: -50px;
+    background: url(./img/3x/left.png);
+    transform: rotate(25deg);
+    -webkit-transform: rotate(25deg);
+
+}
+
+
+
+.leftBoxAnimation {
+    -webkit-animation-name: leftBoxAnimation;
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 3s;
+    /* Safari 4.0 - 8.0 */
+    animation-duration: 3s;
+    animation-name: leftBoxAnimation;
+    animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes leftBoxAnimation {
+    0% {
+        transform: rotate(35deg);
+        -webkit-transform: rotate(35deg);
+    }
+
+
+    50% {
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(35deg);
+        -webkit-transform: rotate(35deg);
+    }
+}
+
+
+/* Standard syntax */
+
+@keyframes leftBoxAnimation {
+    0% {
+        transform: rotate(35deg);
+        -webkit-transform: rotate(35deg);
+    }
+
+
+    50% {
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(35deg);
+        -webkit-transform: rotate(35deg);
+    }
+}
+
+
+
+.boxBorder {
+
+    overflow: hidden;
+    border: 5px solid white;
+    border-radius: 10px;
+    height: 270px;
+    width: 300px;
+    margin-left: 30px;
+
+
+}
+
+.pcBoxBG {
+    height: 100%;
+    border-radius: 10px white;
+    background-color: #73cbc7;
+
+}
+
+.userBoxBG {
+
+    height: 100%;
+    border-radius: 10px white;
+    background-color: #73cbc7;
+}
+
+.boxesBG {
+
+
+    width: 100%;
+    display: flex;
+
+    border-radius: 5px;
+
+
+
+}
+
+.button {
+    background-size: contain !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-origin: content-box !important;
+    background-color: #73cbc7 !important;
+    border: 5px solid #efeaed;
+    border-radius: 20px;
+
+    padding: 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 10px;
+    -webkit-transition-duration: 0.4s;
+    /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+
+    width: 80px;
+    height: 80px;
+
+}
+
+.button:hover {
+    background-color: rgba(149, 90, 127, 0.678) !important;
+
+}
+
+.b1 {
+    background: url(./numbers/1.png);
+}
+
+.b2 {
+    background: url(./numbers/2.png);
+}
+
+.b3 {
+    background: url(./numbers/3.png);
+}
+
+.b4 {
+    background: url(./numbers/4.png);
+}
+
+.b5 {
+    background: url(./numbers/5.png);
+}
+
+.FingerBtns {
+    display: none;
+    justify-content: center;
+    height: 20%;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0px;
+    right: 0px;
+}
+
+.zugAndPeredTitle {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: 'Tomorrow', sans-serif;
+    font-size: 25px;
+}
+
+
+
+
+
+#P2Name {
+    display: none;
+}
+
+.playB {
+    width: 50%;
+    border-color: rgb(94, 94, 94);
+
+    border-width: 1px;
+    font-family: 'Tomorrow', sans-serif;
+
+    font-size: 25px;
+    padding-left: 15px;
+    margin-bottom: 15px;
+    background-color: #f1c40f;
+}
+
+.form {
+    width: 400px;
+
+    margin: auto;
+
+    background-color: #3498db;
+    text-align: center;
+
+    -webkit-transition-duration: 0.3s;
+    /* Safari */
+    transition-duration: 0.3s;
+}
+
+.form:hover {
+    box-shadow: 0px 0px 0px 0px #f1c40f;
+
+}
+
+.inputs {
+    width: 80%;
+    height: 45px;
+    margin: auto;
+    margin-top: 15px;
+    padding-left: 14px;
+    border-color: rgb(94, 94, 94);
+
+    border-width: 1px;
+    font-family: 'Tomorrow', sans-serif;
+
+    font-size: 25px;
+}
+
+#GameType {
+    height: 50px;
+    width: 85%;
+}
+
+.FormeBg {
+    width: 100%;
+}
+
+.NameAndTitle {
+    display: flex;
+}
+
+.peredZugSmaller {
+    font-size: 15px;
+}
+
+
+
+.buttons {
+    height: 100px;
+    width: 100px;
+    border-radius: 100px;
+    color: white;
+    font-family: 'Tomorrow', sans-serif;
+
+    font-size: 15px;
+    border: 0px;
+    box-shadow: 2px 2px 5px 1px black;
+}
+
+#dontClick {
+    background-color: #e74c3c;
+    margin: 3px;
+}
+
+#dontClick:active {
+    margin-left: 9px;
+    box-shadow: 0px 0px 0px 0px black;
+}
+
+#Instructions {
+    background-color: #3498db;
+    margin-left: 50px;
+}
+
+.mainButtons {
+    display: flex;
+}
+
+
+#InstructionsDiv {
+    margin-left: 100px;
+    background: white;
+    border: 1px solid grey;
+    width: 400px;
+    position: absolute;
+    border-radius: 10px;
+    box-shadow: 0px 1px 2px 0.5px;
+    display: none;
+}
+
+#InstructionsText {
+    padding: 10px;
+    font-family: 'Tomorrow', sans-serif;
+
+}
+
+#closeInstructions {
+    color: rgb(245, 240, 240);
+    font-family: 'Tomorrow', sans-serif;
+
+    float: right;
+    background: red;
+    border-radius: 10px;
+}
