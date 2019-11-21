@@ -1,11 +1,9 @@
 
 
-
 html{
-    overflow: scroll;
-    overflow-x: hidden;
-    height: 100%;
+   
 }
+
 
 ::-webkit-scrollbar {
     width: 0px;  /* Remove scrollbar space */
@@ -16,14 +14,15 @@ html{
     background: #FF0000;
 }
 html,
-body {
-    
-    background-repeat: no-repeat;
-    overflow: hidden;
+body { overflow: auto;
+   
+background-repeat: no-repeat;
+   
 
 }
 
 body {
+    
     background-image: linear-gradient(#955A7F, white);
     margin: 0px;
 
@@ -41,26 +40,31 @@ h1 {
 }
 
 .mount {
-    font-family: 'Tomorrow', sans-serif;
-    font-size: 12px;
-    text-align: center;
-    color: black;
-
+   
+    
     height: 300px;
     background: url(./img/Interface.svg);
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
-    position: absolute;
+    position: fixed;
     bottom: 0px;
     z-index: -1;
-    display: flex;
-    justify-content: center;
+
 }
 
 .credit {
-    position: absolute;
+ 
+    bottom: 0px;
+    font-family: 'Tomorrow', sans-serif;
+    font-size: 15px;
+    text-align: center;
+    color: black;
+    position: fixed;
     bottom: 10px;
+    width: 100%;
+    margin: auto;
+    
 }
 
 
@@ -147,10 +151,11 @@ input:checked+.slider:before {
 
 .SwitchToZug {
     display: none;
-    grid-template-columns: 250px 250px 250px;
+    max-width: 700px;
+    grid-template-columns: 33.3% 33.3% 33.3%;
     justify-content: center;
     justify-items: center;
-    width: 700px;
+    width: 80%;
     margin: auto;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -164,7 +169,7 @@ input:checked+.slider:before {
 .boxes {
     display: none;
     justify-content: center;
-    height: 250px;
+    height: 400px;
     width: 100%;
     margin-bottom: 65px;
 
@@ -193,11 +198,11 @@ input:checked+.slider:before {
 
 #pcBox {
     background: url(./img/3x/right.png);
-    transform: rotate(-25deg);
-    -webkit-transform: rotate(-25deg);
-    width: 250px;
-    height: 250px;
+    background-size: contain;
+    width: 100%;
+    height: 100%;
     margin-bottom: -50px;
+  
 }
 
 
@@ -213,19 +218,19 @@ input:checked+.slider:before {
 
 @-webkit-keyframes rightBoxAnimation {
     0% {
-        transform: rotate(-35deg);
-        -webkit-transform: rotate(-35deg);
+        transform: rotate(-30deg);
+        -webkit-transform: rotate(-30deg);
     }
 
 
     50% {
-        transform: rotate(0deg);
-        -webkit-transform: rotate(0deg);
+        transform: rotate(-15deg);
+        -webkit-transform: rotate(-15deg);
     }
 
     100% {
-        transform: rotate(-35deg);
-        -webkit-transform: rotate(-35deg);
+        transform: rotate(-30deg);
+        -webkit-transform: rotate(-30deg);
     }
 }
 
@@ -234,27 +239,27 @@ input:checked+.slider:before {
 
 @keyframes rightBoxAnimation {
     0% {
-        transform: rotate(-35deg);
-        -webkit-transform: rotate(-35deg);
+        transform: rotate(-30deg);
+        -webkit-transform: rotate(-30deg);
     }
 
 
     50% {
-        transform: rotate(0deg);
-        -webkit-transform: rotate(0deg);
+        transform: rotate(-15deg);
+        -webkit-transform: rotate(-15deg);
     }
 
     100% {
-        transform: rotate(-35deg);
-        -webkit-transform: rotate(-35deg);
+        transform: rotate(-30deg);
+        -webkit-transform: rotate(-30deg);
     }
 }
 
 
 #userBox {
 
-    width: 250px;
-    height: 250px;
+    width: 100%;
+    height: 100%;
     margin-bottom: -50px;
     background: url(./img/3x/left.png);
     transform: rotate(25deg);
@@ -276,19 +281,19 @@ input:checked+.slider:before {
 
 @-webkit-keyframes leftBoxAnimation {
     0% {
-        transform: rotate(35deg);
-        -webkit-transform: rotate(35deg);
+        transform: rotate(30deg);
+        -webkit-transform: rotate(30deg);
     }
 
 
     50% {
-        transform: rotate(0deg);
-        -webkit-transform: rotate(0deg);
+        transform: rotate(15deg);
+        -webkit-transform: rotate(15deg);
     }
 
     100% {
-        transform: rotate(35deg);
-        -webkit-transform: rotate(35deg);
+        transform: rotate(30deg);
+        -webkit-transform: rotate(30deg);
     }
 }
 
@@ -297,19 +302,19 @@ input:checked+.slider:before {
 
 @keyframes leftBoxAnimation {
     0% {
-        transform: rotate(35deg);
-        -webkit-transform: rotate(35deg);
+        transform: rotate(30deg);
+        -webkit-transform: rotate(30deg);
     }
 
 
     50% {
-        transform: rotate(0deg);
-        -webkit-transform: rotate(0deg);
+        transform: rotate(15deg);
+        -webkit-transform: rotate(15deg);
     }
 
     100% {
-        transform: rotate(35deg);
-        -webkit-transform: rotate(35deg);
+        transform: rotate(30deg);
+        -webkit-transform: rotate(30deg);
     }
 }
 
@@ -320,8 +325,8 @@ input:checked+.slider:before {
     overflow: hidden;
     border: 5px solid white;
     border-radius: 10px;
-    height: 270px;
-    width: 300px;
+    height: 397px;
+    width: 431px;
     
 
 
@@ -371,7 +376,7 @@ input:checked+.slider:before {
     background-repeat: no-repeat !important;
     background-origin: content-box !important;
     background-color: #75DBD0 !important;
-    border: 6px solid white;
+    border: 7px solid white;
     border-radius: 20px;
 
     padding: 8px;
@@ -387,8 +392,8 @@ input:checked+.slider:before {
     background-color: white;
     color: black;
 
-    width: 80px;
-    height: 80px;
+    width: 93px;
+    height: 93px;
 
 }
 
@@ -420,8 +425,7 @@ input:checked+.slider:before {
 .FingerBtns {
     display: none;
     justify-content: center;
-    height: 20%;
-    position: absolute;
+    position: static;
     margin-left: auto;
     margin-right: auto;
     left: 0px;
@@ -564,4 +568,13 @@ input:checked+.slider:before {
     float: right;
     background: red;
     border-radius: 10px;
+}
+
+
+.footer{
+bottom: 0px;
+    display: block;
+    height: 300px;
+    width: 100%;
+    position: relative;
 }
