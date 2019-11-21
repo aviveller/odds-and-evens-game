@@ -15,5 +15,4 @@ the game is live on fire base hosting.
 
 If you have any suggestions or comments about the code or about the design you can open a pull request or just live a comment.
 
-
 Thank you!
