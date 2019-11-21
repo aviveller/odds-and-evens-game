@@ -1,9 +1,5 @@
 
-
-html{
-   
-}
-
+/* scroll bar */
 
 ::-webkit-scrollbar {
     width: 0px;  /* Remove scrollbar space */
@@ -13,6 +9,8 @@ html{
 ::-webkit-scrollbar-thumb {
     background: #FF0000;
 }
+
+
 html,
 body { overflow: auto;
    
@@ -570,11 +568,3 @@ input:checked+.slider:before {
     border-radius: 10px;
 }
 
-
-.footer{
-bottom: 0px;
-    display: block;
-    height: 300px;
-    width: 100%;
-    position: relative;
-}
