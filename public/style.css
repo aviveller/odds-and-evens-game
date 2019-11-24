@@ -1,34 +1,29 @@
-
-
-
-html{
-    overflow: scroll;
-    overflow-x: hidden;
-    height: 100%;
-}
+/* scroll bar */
 
 ::-webkit-scrollbar {
-    width: 0px;  /* Remove scrollbar space */
-    background: transparent;  /* Optional: just make scrollbar invisible */
+    width: 0px;
+    /* Remove scrollbar space */
+    background: transparent;
+    /* Optional: just make scrollbar invisible */
 }
+
 /* Optional: show position indicator in red */
 ::-webkit-scrollbar-thumb {
     background: #FF0000;
 }
-html,
-body {
-    
-    background-repeat: no-repeat;
-    overflow: hidden;
 
-}
 
-body {
+html {
+
     background-image: linear-gradient(#955A7F, white);
-    margin: 0px;
-
-
+    background-repeat: no-repeat;
 }
+
+body {
+    margin: 0px;
+}
+
+
 
 h1 {
     margin-top: 50px;
@@ -41,26 +36,31 @@ h1 {
 }
 
 .mount {
-    font-family: 'Tomorrow', sans-serif;
-    font-size: 12px;
-    text-align: center;
-    color: black;
+
 
     height: 300px;
     background: url(./img/Interface.svg);
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
-    position: absolute;
+    position: fixed;
     bottom: 0px;
     z-index: -1;
-    display: flex;
-    justify-content: center;
+
 }
 
 .credit {
-    position: absolute;
+
+    bottom: 0px;
+    font-family: 'Tomorrow', sans-serif;
+    font-size: 15px;
+    text-align: center;
+    color: black;
+    position: static;
     bottom: 10px;
+    width: 100%;
+    margin: auto;
+
 }
 
 
@@ -95,10 +95,12 @@ h1 {
     position: absolute;
     cursor: pointer;
     top: 0;
-    left: 0;
+    left: -10px;
     right: 0;
     bottom: 0;
-    background-color: #73cbc7;
+
+
+    background-color: #75DBD0;
     -webkit-transition: .4s;
     transition: .4s;
     height: 35px;
@@ -136,7 +138,7 @@ input:checked+.slider:before {
 
 .slider.round {
     border-radius: 40px;
-    margin-left: -15px;
+
 }
 
 .slider.round:before {
@@ -145,10 +147,11 @@ input:checked+.slider:before {
 
 .SwitchToZug {
     display: none;
-    justify-content: space-evenly;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    width: 700px;
+    max-width: 700px;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    justify-content: center;
+    justify-items: center;
+    width: 80%;
     margin: auto;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -162,9 +165,11 @@ input:checked+.slider:before {
 .boxes {
     display: none;
     justify-content: center;
-    height: 250px;
-    width: 100%;
+    height: 50vh;
+    width: 90%;
     margin-bottom: 65px;
+    margin-left: auto;
+    margin-right: auto;
 
 
 
@@ -182,7 +187,7 @@ input:checked+.slider:before {
     height: 80%;
     width: 45%;
     margin: auto;
-    background-color: #73cbc7;
+    background-color: #75DBD0;
     background-size: contain !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
@@ -191,11 +196,11 @@ input:checked+.slider:before {
 
 #pcBox {
     background: url(./img/3x/right.png);
-    transform: rotate(-25deg);
-    -webkit-transform: rotate(-25deg);
-    width: 250px;
-    height: 250px;
+    background-size: contain;
+    width: 100%;
+    height: 100%;
     margin-bottom: -50px;
+
 }
 
 
@@ -211,19 +216,19 @@ input:checked+.slider:before {
 
 @-webkit-keyframes rightBoxAnimation {
     0% {
-        transform: rotate(-35deg);
-        -webkit-transform: rotate(-35deg);
+        transform: rotate(-30deg);
+        -webkit-transform: rotate(-30deg);
     }
 
 
     50% {
-        transform: rotate(0deg);
-        -webkit-transform: rotate(0deg);
+        transform: rotate(-15deg);
+        -webkit-transform: rotate(-15deg);
     }
 
     100% {
-        transform: rotate(-35deg);
-        -webkit-transform: rotate(-35deg);
+        transform: rotate(-30deg);
+        -webkit-transform: rotate(-30deg);
     }
 }
 
@@ -232,27 +237,27 @@ input:checked+.slider:before {
 
 @keyframes rightBoxAnimation {
     0% {
-        transform: rotate(-35deg);
-        -webkit-transform: rotate(-35deg);
+        transform: rotate(-30deg);
+        -webkit-transform: rotate(-30deg);
     }
 
 
     50% {
-        transform: rotate(0deg);
-        -webkit-transform: rotate(0deg);
+        transform: rotate(-15deg);
+        -webkit-transform: rotate(-15deg);
     }
 
     100% {
-        transform: rotate(-35deg);
-        -webkit-transform: rotate(-35deg);
+        transform: rotate(-30deg);
+        -webkit-transform: rotate(-30deg);
     }
 }
 
 
 #userBox {
 
-    width: 250px;
-    height: 250px;
+    width: 100%;
+    height: 100%;
     margin-bottom: -50px;
     background: url(./img/3x/left.png);
     transform: rotate(25deg);
@@ -274,19 +279,19 @@ input:checked+.slider:before {
 
 @-webkit-keyframes leftBoxAnimation {
     0% {
-        transform: rotate(35deg);
-        -webkit-transform: rotate(35deg);
+        transform: rotate(30deg);
+        -webkit-transform: rotate(30deg);
     }
 
 
     50% {
-        transform: rotate(0deg);
-        -webkit-transform: rotate(0deg);
+        transform: rotate(15deg);
+        -webkit-transform: rotate(15deg);
     }
 
     100% {
-        transform: rotate(35deg);
-        -webkit-transform: rotate(35deg);
+        transform: rotate(30deg);
+        -webkit-transform: rotate(30deg);
     }
 }
 
@@ -295,19 +300,19 @@ input:checked+.slider:before {
 
 @keyframes leftBoxAnimation {
     0% {
-        transform: rotate(35deg);
-        -webkit-transform: rotate(35deg);
+        transform: rotate(30deg);
+        -webkit-transform: rotate(30deg);
     }
 
 
     50% {
-        transform: rotate(0deg);
-        -webkit-transform: rotate(0deg);
+        transform: rotate(15deg);
+        -webkit-transform: rotate(15deg);
     }
 
     100% {
-        transform: rotate(35deg);
-        -webkit-transform: rotate(35deg);
+        transform: rotate(30deg);
+        -webkit-transform: rotate(30deg);
     }
 }
 
@@ -318,17 +323,28 @@ input:checked+.slider:before {
     overflow: hidden;
     border: 5px solid white;
     border-radius: 10px;
-    height: 270px;
-    width: 300px;
-    margin-left: 30px;
+    height: 100%;
+    width: 431px;
 
 
+
+}
+
+.boxBorderLeft {
+
+    margin-right: 15px;
+}
+
+.boxBorderRight {
+
+    margin-left: 15px;
 }
 
 .pcBoxBG {
     height: 100%;
     border-radius: 10px white;
-    background-color: #73cbc7;
+    background-color: #75DBD0;
+
 
 }
 
@@ -336,7 +352,8 @@ input:checked+.slider:before {
 
     height: 100%;
     border-radius: 10px white;
-    background-color: #73cbc7;
+    background-color: #75DBD0;
+
 }
 
 .boxesBG {
@@ -356,8 +373,8 @@ input:checked+.slider:before {
     background-position: center !important;
     background-repeat: no-repeat !important;
     background-origin: content-box !important;
-    background-color: #73cbc7 !important;
-    border: 5px solid #efeaed;
+    background-color: #75DBD0 !important;
+    border: 7px solid white;
     border-radius: 20px;
 
     padding: 8px;
@@ -365,7 +382,7 @@ input:checked+.slider:before {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 10px 10px;
+    margin: 4px 4px;
     -webkit-transition-duration: 0.4s;
     /* Safari */
     transition-duration: 0.4s;
@@ -373,8 +390,8 @@ input:checked+.slider:before {
     background-color: white;
     color: black;
 
-    width: 80px;
-    height: 80px;
+    width: 93px;
+    height: 93px;
 
 }
 
@@ -406,8 +423,7 @@ input:checked+.slider:before {
 .FingerBtns {
     display: none;
     justify-content: center;
-    height: 20%;
-    position: absolute;
+    position: static;
     margin-left: auto;
     margin-right: auto;
     left: 0px;
@@ -419,6 +435,7 @@ input:checked+.slider:before {
     margin-bottom: 10px;
     font-family: 'Tomorrow', sans-serif;
     font-size: 25px;
+    color: white;
 }
 
 
@@ -549,4 +566,74 @@ input:checked+.slider:before {
     float: right;
     background: red;
     border-radius: 10px;
+}
+
+
+
+/* start of desktop styles */
+
+@media screen and (max-width: 991px) {
+    /* start of large tablet styles */
+
+}
+
+@media screen and (max-width: 767px) {
+    /* start of medium tablet styles */
+
+}
+
+@media screen and (max-width: 479px) {
+    /* start of phone styles */
+
+    .boxBorderLeft {
+
+        height: 30vh;
+        width: 80%;
+    }
+
+
+    .boxBorderRight {
+
+        height: 30vh;
+        width: 80%;
+    }
+
+    .boxes {
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .FingerBtns {
+        width: 90%;
+        flex-wrap: wrap;
+    }
+
+    h1 {
+        margin-top: 10px;
+        font-size: 30px;
+
+    }
+
+    .button {
+
+        border: 5px solid white;
+        width: 80px;
+        height: 80px;
+        flex-grow: 1;
+    }
+
+    .credit {
+
+        font-size: 12px;
+        color: white;
+
+    }
+
+    .SwitchToZug {
+
+        width: 90%;
+    
+    }
+
+
 }
