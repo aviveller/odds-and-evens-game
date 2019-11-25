@@ -103,3 +103,4 @@ function ShowInstructions() {
 function closeInstructions() {
   document.getElementById("InstructionsDiv").style.display = "none";
 }
+
